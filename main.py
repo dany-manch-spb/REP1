@@ -31,7 +31,11 @@ class MyWidget(QMainWindow, Ui_MainWindow):
             x = random.randint(self.r1, self.geometry().width() - self.r1)
             y = random.randint(self.r1, self.geometry().height() - self.r1)
 
-            qp.setBrush(QColor(255, 255, 0))
+            r = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
+
+            qp.setBrush(QColor(r, g, b))
             qp.drawEllipse(x, y, self.r1, self.r1)
 
             qp.end()
